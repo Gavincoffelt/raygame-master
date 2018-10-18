@@ -1,5 +1,5 @@
 #include "Barbarian.h"
-
+#include "Corpse.h"
 Knight::Knight()
 {
 	curFrame = 0;
@@ -19,7 +19,7 @@ void Knight::update(float frameTime)
 {
 	timer += frameTime;
 
-	if (timer >= (0.1f)) {
+	if (timer >= (0.2f)) {
 		timer = 0.0f;
 		curFrame++;
 		if (curFrame == 4) {
@@ -31,6 +31,13 @@ void Knight::update(float frameTime)
 void Knight::draw()
 {
 	DrawTextureEx(knightIdle[curFrame], position, 0.0f, 5.0f, WHITE);
+}
+
+void Knight::onDeath(Knight a)
+{
+	if (a.health <= 0) {
+		a.hasHealth = false;
+	}
 }
 
 //void Knight::draw()

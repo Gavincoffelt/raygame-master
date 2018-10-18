@@ -11,7 +11,7 @@ public:
 	int gold;
 	int armor;
 	Vector2 position;
-	
+	bool hasHealth = true;
 	int curFrame = 0;
 
 	float timer;
@@ -20,7 +20,7 @@ public:
 	void draw();
 	//bool loaded;
 	//int knightsprites = 0;
-	
+	void onDeath(Knight a);
 
 
 };

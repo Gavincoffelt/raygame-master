@@ -13,4 +13,5 @@ public:
 	corpse(Knight a);
 	corpse(Wizard a);
 
+
 };

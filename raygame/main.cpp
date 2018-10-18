@@ -12,8 +12,9 @@ int main()
 	InitWindow(screenWidth, screenHeight, "DungeonCrawler?");
 
 	Knight bob;
+	
 	bob.position = { 200,200 };
-
+	
 	SetTargetFPS(60);
 
 
@@ -24,7 +25,7 @@ int main()
 		// Update
 		bob.update(GetFrameTime());
 			
-		
+		bob.onDeath(bob);
 		// TODO: Update your variables here
 		
 
@@ -35,8 +36,11 @@ int main()
 		
 		
 		bob.draw();
-
-		
+		bob.health = 0;
+		/*if (bob.hasHealth == false) {
+			corpse(Knight (bob));
+		 }
+		*/
 
 		EndDrawing();
 		

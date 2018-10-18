@@ -134,11 +134,13 @@
     <ClCompile Include="Barbarian.cpp" />
     <ClCompile Include="Corpse.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Wizard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Barbarian.h" />
     <ClInclude Include="Corpse.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="Wizard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
